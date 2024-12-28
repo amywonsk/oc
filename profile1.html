@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+
+        background-image: url('profile1/back.gif');
+        font-family: 'comic sans ms';
+    }
+
+    .name {
+        color: rgb(0, 255, 0);
+        text-shadow: 3px 3px #000000;
+    }
+
+    #text {
+        color: rgb(0, 255, 0);
+        text-shadow: 2px 2px #000000;
+    }
+
+    summary {
+        color: rgb(0, 255, 0);
+        text-shadow: 2px 2px #000000;
+    }
+
+    .ID {
+        float: left;
+        margin: 1px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="box-shortcut">
+        <ul>
+
+
+
+            <li><a href="character.html">⭠OC</a></li>
+
+
+        </ul>
+
+        <button class="btn-scroll-top" title="스크롤 이동">up</button>
+        <script>
+            document.querySelector('.btn-scroll-top').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+    </div>
+    <div class="wrap">
+        <h2 class="name">
+            Memphis
+        </h2>
+        <p id="text">
+            name: Memphis Dunn (male)<br>
+            height: 178㎝<br>
+            weight: 69㎏<br>
+            <br>
+        </p>
+        </p>
+        <div class="slider" id="slider1">
+            <div class="slides">
+                <img class="img" src="profile1/1.png" alt="" loading="lazy" onclick="openModal(this)">
+                <img class="img" src="profile1/2.jpg"" loading="lazy" onclick="openModal(this)">
+            </div>
+            <button class="prev" onclick="moveSlides(-1, 'slider1')">❮</button>
+            <button class="next" onclick="moveSlides(1, 'slider1')">❯</button>
+        </div>
+        <details>
+            <summary>comment</summary>
+            <span style="color: rgb(0, 255, 0);">
+                <h3>nationallity</h3>
+              USA<br>
+
+              <h3>surname</h3>
+              Dunn<br>
+              <h3>given names</h3>
+              Memphis<br>
+              <h3>sex</h3>
+              M<br>
+              <h3>date of birth</h3>
+              14 APR 3007<br>
+              <h3>place of birth</h3>
+              Tennessee U.S.A<br>
+            </span>
+        </details>
+        <p id="video">
+            <span style="color: rgb(0, 255, 0); font-weight: bold;">video</span><br>
+        </p>
+
+        <div class="slider" id="slider2">
+            <div class="slides">
+                <video class="img" src="" controls></video>
+
+            </div>
+            <button class="prev" onclick="moveSlides(-1, 'slider2')">❮</button>
+            <button class="next" onclick="moveSlides(1, 'slider2')">❯</button>
+        </div>
+
+    
+
+
+
+
+        <!-- 모달 구조 -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+
+
+            <script src="script.js"></script>
+
+
+        </div>
+    </div>
+
+</body>
